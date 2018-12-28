@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import './demo/drawer_demo.dart';
 import './demo/bottomNavigatorBar_demo.dart';
 import './demo/listview_demo.dart';
+import './demo/basic_demo.dart';
 
 void main() => runApp(App());
 
@@ -70,7 +71,7 @@ Widget _itemBuilder(BuildContext context,int index) {
             body:TabBarView(
               children: <Widget>[
                 ListViewDemo(),
-                Icon(Icons.change_history,size: 128.0,color: Colors.black12),
+                BasicDemo(),
                 Icon(Icons.directions_bike,size: 128.0,color: Colors.black12)
               ],
             ),
