@@ -3,6 +3,7 @@ import './demo/drawer_demo.dart';
 import './demo/bottomNavigatorBar_demo.dart';
 import './demo/listview_demo.dart';
 import './demo/basic_demo.dart';
+import './demo/layout_demo.dart';
 
 void main() => runApp(App());
 
@@ -72,7 +73,8 @@ Widget _itemBuilder(BuildContext context,int index) {
               children: <Widget>[
                 ListViewDemo(),
                 BasicDemo(),
-                Icon(Icons.directions_bike,size: 128.0,color: Colors.black12)
+                LayoutDemo()
+                //Icon(Icons.directions_bike,size: 128.0,color: Colors.black12)
               ],
             ),
             drawer: DrawerDemo(),
