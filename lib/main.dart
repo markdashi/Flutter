@@ -54,7 +54,7 @@ Widget _itemBuilder(BuildContext context,int index) {
               actions: <Widget>[
                 IconButton(
                 icon: Icon(Icons.search),
-                onPressed: null,
+                onPressed: ()=>debugPrint('xx'),
               )
               ],
               elevation: 0.0,
@@ -77,7 +77,7 @@ Widget _itemBuilder(BuildContext context,int index) {
                 BasicDemo(),
                 LayoutDemo(),
                 // Icon(Icons.directions_bike,size: 128.0,color: Colors.black12),
-                ViewDemo(),
+                ViewDemo()
               ],
             ),
             drawer: DrawerDemo(),
