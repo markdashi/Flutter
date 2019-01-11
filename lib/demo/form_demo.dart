@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+
 class FormDemo extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -46,6 +47,8 @@ class _RegisterFormDemoState extends State<RegisterFormDemo> {
   final registerFormKey = GlobalKey<FormState>();
   String username, password;
   bool autovalidate = false;
+
+  bool isVisible = false;
 
   void submitRegister() {
     if(registerFormKey.currentState.validate()) {
