@@ -61,7 +61,29 @@ class _HttpDemoHomeState extends State<HttpDemoHome> {
   
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return FutureBuilder(
+      future: fetchPosts(),
+      builder: (BuildContext context,AsyncSnapshot snapshot){
+        print('connectionState: ${snapshot.connectionState}');
+        print('data: ${snapshot.data}');
+        if (snapshot.connectionState == ConnectionState.waiting) {
+          return Center(
+            child: Text('loading'),
+          );
+        } 
+        return ListView(
+          children: snapshot.data.map<Widget>((item){
+            return ListTile(
+              title: Text(item.title),
+              subtitle: Text(item.author),
+              leading: CircleAvatar(
+                backgroundImage: NetworkImage(item.imageUrl),
+              ),
+            );
+          }).toList(),
+        );
+      },
+    );
   }
 }
 class Post {
