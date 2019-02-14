@@ -10,6 +10,7 @@ import './demo/navigator_demo.dart';
 import './demo/form_demo.dart';
 import './demo/material_componets.dart';
 import './demo/state/state_management_demo.dart';
+import './demo/http_demo.dart';
 
 void main() => runApp(App());
 
@@ -19,13 +20,14 @@ class App extends StatelessWidget {
       return MaterialApp(
           debugShowCheckedModeBanner: false,
           // home: NavigatorDemo(),
-          initialRoute: '/state-managemnet',
+          initialRoute: '/http',
           routes: {
             '/' : (context) => Home(),
             '/about' : (context) => Page(title: 'About'),
             '/form': (context) => FormDemo(),
             '/mdc': (context) => MaterialComponets(),
-            '/state-managemnet': (content) => StateManagementDemo()
+            '/state-managemnet': (content) => StateManagementDemo(),
+            '/http':(context) => HttpDemo(),
           },
           theme: ThemeData(
             textTheme: TextTheme(
