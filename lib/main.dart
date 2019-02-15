@@ -12,6 +12,7 @@ import './demo/material_componets.dart';
 import './demo/state/state_management_demo.dart';
 import './demo/http_demo.dart';
 import './demo/animation/animation_demo.dart';
+import './demo/bloc/bloc_demo.dart';
 
 void main() => runApp(App());
 
@@ -21,7 +22,7 @@ class App extends StatelessWidget {
       return MaterialApp(
           debugShowCheckedModeBanner: false,
           // home: NavigatorDemo(),
-          initialRoute: '/animation',
+          initialRoute: '/bloc',
           routes: {
             '/' : (context) => Home(),
             '/about' : (context) => Page(title: 'About'),
@@ -30,6 +31,7 @@ class App extends StatelessWidget {
             '/state-managemnet': (content) => StateManagementDemo(),
             '/http':(context) => HttpDemo(),
             '/animation':(context) => AnimationDemo(),
+            '/bloc':(context) => BlocDemo()
           },
           theme: ThemeData(
             textTheme: TextTheme(
